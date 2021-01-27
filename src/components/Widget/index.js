@@ -64,10 +64,10 @@ Widget.Input = styled.input`
   outline: none;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   padding: 10px;
-  color: "${({ theme }) => theme.colors.contrastText}";
   ::placeholder {
     color: ${({ theme }) => theme.colors.secondary};
   }
+  color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
 `;
 
