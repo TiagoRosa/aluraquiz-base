@@ -1,11 +1,12 @@
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import Head from 'next/head'
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -15,23 +16,22 @@ import Head from 'next/head'
 // `;
 
 export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
+width: 100%;
+max-width: 350px;
+padding-top: 45px;
+margin: auto 10%;
+@media screen and (max-width: 500px) {
+margin: auto;
+padding: 15px;
+}
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        <title>Quiz da Esquadrilha da Fumaça</title>
-        <meta property="og:image" content="http://arenafm.com.br/fotos/2969.jpg"/>
-      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -40,6 +40,25 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+            <form onSubmit={(infosDoEvento) => {
+              infosDoEvento.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <Widget.Input
+                // eslint-disable-next-line react/jsx-no-bind
+                onChange={(infosDoEvento) => {
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Insira seu nome"
+              />
+              <Widget.Button type="submit" disabled={name.length === 0}>
+                Jogar
+                {' '}
+                {name}
+              </Widget.Button>
+            </form>
+
           </Widget.Content>
         </Widget>
 
