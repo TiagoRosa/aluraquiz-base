@@ -4,25 +4,39 @@
   "description": "Testes seu conhecimento sobre a esquadrilha da fumaça",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "image": "/images/afa.jpg",
+      "title": "Onde fila localizado a AFA?",
+      "description": "Carinhosamente apelidada por Ninho das Águias",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "São José dos Campos",
+        "São José dos Pinhais",
+        "Pirassunga",
+        "Pindamonhangaba"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "/images/eda.jpg",
+      "title": "Quantas aeronaves participam de uma apresentação aérea oficial?",
+      "description": "essa foi de lambuja pra vocês",
+      "answer": 3,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "1",
+         "9",
+         "3",
+         "7"
+      ]
+    },
+    {
+      "image": "/images/isolado.jpg",
+      "title": "Como é conhecido o #7?",
+      "description": "aquele perdido ali. rsrsrs",
+      "answer": 1,
+      "alternatives": [
+         "Soneca",
+         "Isolado",
+         "Rejeitado",
+         "Protegido"
       ]
     }
   ],
