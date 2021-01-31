@@ -69,9 +69,8 @@ export default function Home() {
             <ul>
               {db.external.map((linkExterno) => {
                 const [projectName, user] = linkExterno
-                  .replace(/\//g, '')
-                  .replace('https:', '')
-                  .replace('.vercel.app', '')
+                  .replace('https://', '')
+                  .replace('.vercel.app/', '')
                   .split('.');
                 return (
                   <li
@@ -79,6 +78,7 @@ export default function Home() {
                   >
                     <Widget.Topic
                       as={Link}
+                      data-disabled={name.length === 0}
                       href={`/quiz/${projectName}___${user}?name=${name}`}
                     >
                       {`${user}/${projectName}`}

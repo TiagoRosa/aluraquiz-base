@@ -38,6 +38,90 @@
          "Rejeitado",
          "Protegido"
       ]
+    },
+    {
+      "image": "/images/historia.jpg",
+      "title": "Em que ano foi feita a primeira apresentação oficial?",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+         "1955",
+         "1976",
+         "1952",
+         "1972"
+      ]
+    },
+    {
+      "image": "/images/desfolhado.jpg",
+      "title": "Qual o nome dado a manobra executada na imagem acima?",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+         "Pinheiro de Natal",
+         "Desfolhado",
+         "Catedral de Brasilia",
+         "Desagrupamento"
+      ]
+    },
+    {
+      "image": "/images/anjodaguarda.jpg",
+      "title": "Os mecanicos da esquadrilha da fumaça, são conhecidos como?",
+      "description": "",
+      "answer": 3,
+      "alternatives": [
+         "Mecanicos",
+         "Manobrista",
+         "Guarda Costa",
+         "Anjos da Guarda"
+      ]
+    },
+    {
+      "image": "/images/t65.jpg",
+      "title": "A imagem acima, mostra a primeira aeronave utilizada pela esquadrilha da fumaça.",
+      "description": "Qual é essa aeronave",
+      "answer": 0,
+      "alternatives": [
+         "T6",
+         "T25",
+         "T27",
+         "A29"
+      ]
+    },
+    {
+      "image": "/images/dna.jpg",
+      "title": "A manobra DNA com espelho, é realizada com um total de quantas aeronaves?",
+      "description": "",
+      "answer": 1,
+      "alternatives": [
+         "2",
+         "3",
+         "4",
+         "1"
+      ]
+    },
+    {
+      "image": "/images/quatrilho.jpg",
+      "title": "Em um determinado momento da apresentação, 4 aeronaves realizam juntas algumas manobras.",
+      "description": "Qual o nome dado a esse grupo",
+      "answer": 1,
+      "alternatives": [
+         "Quarteto fantástico",
+         "Quatrilho",
+         "Três homens e um segredo",
+         "Os quatro"
+      ]
+    },
+    {
+      "image": "/images/break.jpg",
+      "title": "Essa foto é uma das manobras mais bonitas da esquadrilha da fumaça.",
+      "description": "Conhecida como?",
+      "answer": 3,
+      "alternatives": [
+         "Leque",
+         "Explosão",
+         "Bomba",
+         "Break"
+      ]
     }
   ],
   "external": [
