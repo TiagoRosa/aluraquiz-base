@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 // import db from '../../../db.json';
@@ -83,6 +84,7 @@ function QuestionWidget({
 }) {
   const [selectedAlternative, setSelectedAlternative] = useState(undefined);
   const [isQuestionSubmited, setIsQuestionSubmited] = useState();
+  const [correctAlternative, setCorrectAlternative] = useState(undefined);
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
@@ -99,7 +101,7 @@ function QuestionWidget({
         alt="Descrição"
         style={{
           width: '100%',
-          height: '150px',
+          height: '100%',
           objectFit: 'cover',
         }}
         src={question.image}
@@ -116,10 +118,12 @@ function QuestionWidget({
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
             setIsQuestionSubmited(true);
+            setCorrectAlternative(true);
             setTimeout(() => {
               addResult(isCorrect);
+              setCorrectAlternative(undefined);
               setIsQuestionSubmited(false);
-              setSelectedAlternative();
+              setSelectedAlternative(undefined);
               onSubmit();
             }, 3 * 500);
           }}
@@ -134,7 +138,8 @@ function QuestionWidget({
                 key={alternativeId}
                 htmlFor={alternativeId}
                 data-selected={isSelected}
-                data-status={isQuestionSubmited && alternativeStatus}
+                data-status={isQuestionSubmited && isSelected && alternativeStatus}
+                data-right={isQuestionSubmited && alternativeIndex === question.answer && correctAlternative}
               >
                 <input
                   style={{ display: 'none' }}
@@ -155,8 +160,8 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você Acertou</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você Errou</p>}
+          {isQuestionSubmited && isCorrect && <p>Certa Resposta</p>}
+          {isQuestionSubmited && !isCorrect && <p>Infelizmente você errou</p>}
         </AlternativeForm>
       </Widget.Content>
     </Widget>

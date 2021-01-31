@@ -55,7 +55,7 @@
       "image": "/images/desfolhado.jpg",
       "title": "Qual o nome dado a manobra executada na imagem acima?",
       "description": "",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
          "Pinheiro de Natal",
          "Desfolhado",
@@ -103,11 +103,11 @@
       "image": "/images/quatrilho.jpg",
       "title": "Em um determinado momento da apresentação, 4 aeronaves realizam juntas algumas manobras.",
       "description": "Qual o nome dado a esse grupo",
-      "answer": 1,
+      "answer": 2,
       "alternatives": [
          "Quarteto fantástico",
-         "Quatrilho",
          "Três homens e um segredo",
+         "Quatrilho",
          "Os quatro"
       ]
     },
